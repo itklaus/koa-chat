@@ -1,0 +1,26 @@
+Node.js выполняется в один поток, а уже в нем может быть несколько потоков. Stream3
+
+Readable, Writable, Duplex, Transform
+Наследован он EvenetEmmitor // object, .on, .emit, .buffer = []
+Освобождаем данные:
+stream.pipe считывает данные, с паузы может снимать
+
+.on('data', chunk => {})
+stream.resume() / stream.pause()
+
+.on(readable, () => {
+  const chunk = stream.read();
+})
+
+Разные события в разных модулях имеют разные приименения
+Нужно закрывать оборванные соеденения
+const file = new fs.ReadStream(filepath); file.on('error)
+
+unit, intergration, e2e
+запускать сервер до запуска тестов
+done передаем для сихнр
+before () // запсукаем
+after()   // закрыть соеденения - вызываем в конце заверш теста
+
+request для создание сервера для теста
+

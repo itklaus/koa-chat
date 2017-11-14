@@ -5,7 +5,7 @@ const server = new Server();
 
 const emit = server.emit;
 
-server.emit = (...args) => {
+server.emit = (... args) => {
   console.log(args[0]); // eventName
   // mandatory return
   return emit.apply(server, args);
