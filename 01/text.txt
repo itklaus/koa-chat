@@ -1,0 +1,50 @@
+EsLint для поддержки синтаксиса проекта.
+Установка:
+1.Устанавливаем глобально сам ESLint
+2..eslintrc
+3.Настраиваем конфиг, редактор
+
+Node:
+npm repo request // откроется страничка с репозиторием ноды
+npm home         // домашнию страничку
+
+У npm появлится конкурент, yarn. Разработан в Facebook.
+Плюсы: Быстрее.
+
+
+// пример: 
+NODE_PATH=./handlers:./modules node index.js
+npm => scripts : {... список команд test/start, etc}
+
+nodemon => для обновления файлов
+
+Виды дебагинга:
+node --inspect name.js
+ide
+
+HTTP
+res.end можно отправить только строчку
+EeventEmmitor
+keep-alive => техника 
+
+
+LibUv (c++) => взаимодействие с платформой, все асинхронные операции - IO
+V8 (c++) - javascript
+
+Колбеки => асинхронные функции
+
+Изначально вызывается обычный джаваскрипт, сам он не умеет заргужать файлы
+
+macrotask: [fs.open, immediate] // затем в дело вступает libUV
+mictotask: [nextTick, Promise] // завершится событийный цикл
+
+process.nextTick() // чтобы функция была рили асинхронная
+
+const a = (parameter, cb) => {
+  if (parameter < 10)
+    // колбек вызывается после джаваскрипта
+    process.nextTick(cb(new Error('paramter ,,')));
+  setTimeout(cb, 1000);
+}
+
+time.unref // можно не ждать 10 секунд
