@@ -1,0 +1,10 @@
+Так же существуют нагрузочные тыстирование
+node-nock для тестирования http,server - интеграцион
+yakbak также для тестов
+sinon js
+
+NODE_ENV=test mocha test/integrations/**/*.js
+--reporter nyan
+
+Есть еще инструменты для проверки % покр. тестов
+instanbul - самая популярнаяc
