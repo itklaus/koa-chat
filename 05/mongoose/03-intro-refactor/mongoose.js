@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/test', {
     socketOptions: {
       keepAlive: 1
     },
-    poolSize:      5
+    poolSize: 5
   }
 });
 

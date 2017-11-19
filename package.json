@@ -1,5 +1,5 @@
 {
-  "name": "chat",
+  "name": "node-materials",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -60,7 +60,7 @@
     "yargs": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^3.3.1",
     "eslint-config-google": "^0.6.0",
     "selenium-webdriver": "^3.0.1"
   }
