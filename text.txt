@@ -1,8 +1,0 @@
-mongose 
-mongorobot
-
-mongoose.get('debug', true) // в консоль
-
-userSchema = new // генерация полей для базы данных
-
-// затем сохраняем модель
